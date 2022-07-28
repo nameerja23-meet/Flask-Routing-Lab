@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <title>Product</title>
 </head>
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
 <body>
+	<div>
+	<a href="{{url_for('index')}}"><button>Back</button>
+	{%if productType == 'shalevs'%}
+		{%for img in shalevImages%}
+			
 
 </body>
 </html>

@@ -5,10 +5,25 @@
     <title>Home</title>
 </head>
 <body>
-	<h1>ebay</h1>
+	<div style="display: inline; height: 50px">
+		<h1>ebay</h1> 
+		<a href="{{url_for('cart')}}" style="position: relative; left:1200px; bottom: 50px"><button>Cart</button></a>
+	</div>
 	<h5>Buy and sell anything and everything as long as its mediocre!</h5>
 	<p>Explore our most exquisite package SHLEBΩ!<br>2 for the price of 1.5!</p>
-	<a href=" "><img src="/static/css/shalevs.jpg" width= 800 height = 350></a>
-	
+	<a href="{{url_for('products', productType='shalevs')}}"><img src="/static/css/shalevs.jpg" width= 800 height = 350></a>
+	<h2>Style your shalev:</h3>
+	<h3>Shalev accessories</h3>
+	<div>
+		<a href="{{url_for('products', productType = 'shalevAccessories')}}"><img src="/static/css/shalevGlasses.png" width = 400></a>
+		<a href="{{url_for('products', productType='shalevAccessories')}}"><img src="/static/css/shalevBackpack.avif" width = 400 height=300></a>
+		<a href="{{url_for('products', productType='shalevAccessories')}}"><img src="/static/css/shalevChain.png" width=270></a>
+	</div>
+	<h3>Shalev clothing</h3>
+	<div>
+		<a href="{{url_for('products', productType='shalevClothing')}}"><img src="/static/css/shalevShoes.webp" width =400></a>
+		<a href="{{url_for('products', productType='shalevClothing')}}"><img src="/static/css/shalevJeans.png" width="400" height="300"></a>
+		<a href="{{url_for('products', productType='shalevClothing')}}"><img src="/static/css/shalevShirt.jpg" width = 400></a>
+	</div>
 </body>
 </html>
