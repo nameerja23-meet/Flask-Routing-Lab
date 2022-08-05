@@ -7,7 +7,9 @@ app = Flask(  # Create a flask app
     static_folder='static'  # Name of directory for static files
 )
 
-
+shalevImages = ['/static/css/shalev_omega.jpg', 'shalev_shleb.jpg', '/static/css/shalevs.jpg']
+accessoriesImages = ['/static/css/shalevGlasses.png', '/static/css/shalevBackpack.avif', "/static/css/shalevChain.png"]
+clothingImages = ['static/css/shalevShoes.webp', '/static/css/shalevJeans.png', '/static/css/shalevShirt.jpg']
 
 @app.route('/')
 def index():
@@ -17,7 +19,10 @@ def index():
 @app.route('/products/<string:productType>')
 def products(productType):	
 	return render_template('product.html',
-		productType = productType)
+		productType = productType,
+		shalevImages = shalevImages,
+		accessoriesImages = accessoriesImages,
+		clothingImages =clothingImages)
 
 
 @app.route('/cart')
